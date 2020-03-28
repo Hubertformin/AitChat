@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "589121513983",
+    "firebase_url": "https://ait-chat-enchird.firebaseio.com",
+    "project_id": "ait-chat-enchird",
+    "storage_bucket": "ait-chat-enchird.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589121513983:android:d561974a9c31163c255fca",
+        "android_client_info": {
+          "package_name": "com.enchirdentity.aitchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589121513983-c2kfdglri5v2hqj5psjckuue2thrk8on.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.enchirdentity.aitchat",
+            "certificate_hash": "3a429ecd29a749b2c62502008a6f2bf1b9416600"
+          }
+        },
+        {
+          "client_id": "589121513983-ja6rofjd06bsd3hd8u3i048t5rirfeha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY7J9TUTviy3sGapDESyn6q8K3vs1BG88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "589121513983-ja6rofjd06bsd3hd8u3i048t5rirfeha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
