@@ -2,16 +2,16 @@ import 'package:aitchat/models/message_model.dart';
 import 'package:aitchat/models/user_model.dart';
 import 'package:flutter/material.dart';
 
-class ChatScreen extends StatefulWidget {
+class DmScreen extends StatefulWidget {
   final User user;
 
-  ChatScreen({this.user});
+  DmScreen({this.user});
 
   @override
-  _ChatScreenState createState() => _ChatScreenState();
+  _DmScreenState createState() => _DmScreenState();
 }
 
-class _ChatScreenState extends State<ChatScreen> {
+class _DmScreenState extends State<DmScreen> {
   String message = '';
   _buildMessage(Message message, bool isMe) {
     return Container(
@@ -104,23 +104,29 @@ class _ChatScreenState extends State<ChatScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       appBar: AppBar(
-        title: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        title: Row(
           children: <Widget>[
-            Text(widget.user.name, style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),),
-            SizedBox(height: 3.0,),
-            Row(
+            CircleAvatar(backgroundImage: AssetImage(widget.user.imageUrl), radius: 20.0,),
+            SizedBox(width: 10.0,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Container(
-                  height: 10,
-                  width: 10,
-                  decoration: BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.all(Radius.circular(80))
-                  ),
+                Text(widget.user.name, style: TextStyle(fontSize: 18.0, color: Colors.white, fontWeight: FontWeight.bold),),
+                SizedBox(height: 3.0,),
+                Row(
+                  children: <Widget>[
+                    Container(
+                      height: 10,
+                      width: 10,
+                      decoration: BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.all(Radius.circular(80))
+                      ),
+                    ),
+                    SizedBox(width: 4.0,),
+                    Text('Online', style: TextStyle(fontSize: 10.0, color: Colors.white),),
+                  ],
                 ),
-                SizedBox(width: 4.0,),
-                Text('Online', style: TextStyle(fontSize: 10.0),),
               ],
             ),
           ],

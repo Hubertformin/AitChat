@@ -25,15 +25,18 @@ class _LoginScreenState extends State<LoginScreen> {
             decoration: InputDecoration(
                 border: InputBorder.none,
                 contentPadding: EdgeInsets.only(top: 14.0),
-                prefixIcon: Icon(Icons.mail, color: Colors.white,),
+                prefixIcon: Icon(
+                  Icons.mail,
+                  color: Colors.white,
+                ),
                 hintText: 'Enter your email',
-                hintStyle: kHintTextStyle
-            ),
+                hintStyle: kHintTextStyle),
           ),
         ),
       ],
     );
   }
+
   Widget _buildPasswordTF() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,10 +56,12 @@ class _LoginScreenState extends State<LoginScreen> {
             decoration: InputDecoration(
                 border: InputBorder.none,
                 contentPadding: EdgeInsets.only(top: 14.0),
-                prefixIcon: Icon(Icons.lock, color: Colors.white,),
+                prefixIcon: Icon(
+                  Icons.lock,
+                  color: Colors.white,
+                ),
                 hintText: 'Enter your password',
-                hintStyle: kHintTextStyle
-            ),
+                hintStyle: kHintTextStyle),
           ),
         ),
       ],
@@ -65,10 +70,23 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget _buildLoginBtn() {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 25.0),
+      padding: EdgeInsets.only(top: 25.0, bottom: 15.0),
+      width: double.infinity,
       child: RaisedButton(
-        child: Text('Login'),
+        elevation: 5.0,
+        child: Text(
+          'Head In',
+          style: TextStyle(
+              color: Colors.indigo,
+              fontSize: 18.0,
+              letterSpacing: 1.5,
+              fontWeight: FontWeight.bold),
+        ),
         onPressed: () {},
+        padding: EdgeInsets.all(15.0),
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+        color: Colors.white,
       ),
     );
   }
@@ -86,13 +104,14 @@ class _LoginScreenState extends State<LoginScreen> {
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [
-                Color(0xFF73AEF5),
-                Color(0xFF61A4F1),
-                Color(0xFF478DE0),
-                Color(0xFF398AE5),
+                Colors.indigo[300],
+                Colors.indigo[400],
+                Colors.indigo[500],
+                Colors.indigo[600]
               ],
               stops: [0.1, 0.4, 0.7, 0.9],
-            )),
+            )
+            ),
           ),
           Container(
             height: double.infinity,
@@ -107,19 +126,43 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 30.0,
-                        fontWeight: FontWeight.bold
-                    ),
+                        fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 30.0,),
+                  SizedBox(
+                    height: 30.0,
+                  ),
                   _buildEmailTF(),
-                  SizedBox(height: 30.0,),
+                  SizedBox(
+                    height: 30.0,
+                  ),
                   _buildPasswordTF(),
                   Container(
                     alignment: Alignment.centerRight,
                     child: FlatButton(
-                      child: Text('Forgot password?', style: kLabelStyle,),
+                      child: Text(
+                        'Forgot password?',
+                        style: kLabelStyle,
+                      ),
                       onPressed: () {},
                     ),
+                  ),
+                  _buildLoginBtn(),
+                  Row(
+                    children: <Widget>[
+                      Text("Don't have an account?", style: TextStyle(fontSize: 18.0, color: Colors.white),),
+                      FlatButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/create-account');
+                        },
+                        child: Text(
+                          'Sign up',
+                          style: TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ],
                   )
                 ],
               ),

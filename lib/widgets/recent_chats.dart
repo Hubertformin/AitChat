@@ -1,5 +1,5 @@
 import 'package:aitchat/models/message_model.dart';
-import 'package:aitchat/screens/chat_screen.dart';
+import 'package:aitchat/screens/dm_screen.dart';
 import 'package:flutter/material.dart';
 
 class RecentChats extends StatefulWidget {
@@ -28,7 +28,7 @@ class _RecentChatsState extends State<RecentChats> {
                 onTap: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (_) => ChatScreen(user: chat.sender)
+                        builder: (_) => DmScreen(user: chat.sender)
                     )
                 ),
                 child: Container(

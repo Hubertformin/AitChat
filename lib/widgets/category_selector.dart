@@ -33,7 +33,7 @@ class _CategorySelectorState extends State<CategorySelector> {
                 categories[index],
                 style: TextStyle(
                   color: index == selectedIndex ? Colors.white : Colors.white60,
-                  fontSize: 15.0,
+                  fontSize: index == selectedIndex ? 18.0 : 15.0,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1.2
                 ),

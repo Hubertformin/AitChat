@@ -1,5 +1,5 @@
 import 'package:aitchat/models/message_model.dart';
-import 'package:aitchat/screens/chat_screen.dart';
+import 'package:aitchat/screens/dm_screen.dart';
 import 'package:flutter/material.dart';
 
 class RecentContacts extends StatelessWidget {
@@ -39,7 +39,7 @@ class RecentContacts extends StatelessWidget {
                 onTap: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (_) => ChatScreen(user: favorites[index])
+                        builder: (_) => DmScreen(user: favorites[index])
                     )
                 ),
                 child: Padding(

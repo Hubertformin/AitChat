@@ -1,4 +1,4 @@
-# aitchat
+# Aitchat
 
 Chat and meet new people
 

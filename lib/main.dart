@@ -1,3 +1,4 @@
+import 'package:aitchat/screens/create_account.dart';
 import 'package:aitchat/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:aitchat/screens/home_screen.dart';
@@ -24,9 +25,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.indigo,
-        accentColor: Color(0xFFFEFEF)
+        accentColor: Colors.pinkAccent
       ),
-      home: LoginScreen(),
+      home: HomeScreen(),
+      routes: {
+        '/login': (BuildContext context) => LoginScreen(),
+        '/create-account': (BuildContext context) => CreateAccountScreen(),
+      },
     );
   }
 }
